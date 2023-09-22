@@ -1,4 +1,12 @@
-# Modern Market Manager
+# Modern Market Manager 
+This project is a e-commerce SaaS platform for manging online store projects. 
+
+## Platform Features
+* Allow for users to register and log in as administrators
+* Add, modify, and delete online stores 
+* Add, modify, and delete products within stores
+* View individual store orders, accounts, and current revenue
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
