@@ -7,7 +7,11 @@ This project is a e-commerce SaaS platform for manging online store projects.
 * Add, modify, and delete products within stores
 * View individual store orders, accounts, and current revenue
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Project Frameworks & Packages
+This framework for this project utilizes [Next.js](https://nextjs.org/) version 13.5 and is bootstrapped with the [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+This project also makes use of the following services and packages:
+* Auth0 ([@auth0/nextjs](https://github.com/auth0/nextjs-auth0)) - For user authentication and authorization
 
 ## Getting Started
 
@@ -24,10 +28,6 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 
