@@ -5,19 +5,26 @@ import {
   Route
 } from "react-router-dom"
 
-import PrivateRoute from './routes/PrivateRoute';
-
-import Dashboard from './pages/Admin/Dashboard';
 import Login from './pages/Auth/Login';
 import SignUp from './pages/Auth/SignUp';
-import ManageTasks from './pages/Admin/ManageTasks';
-import CreateTask from './pages/Admin/CreateTask';
-import ManageRoles from './pages/Admin/ManageRoles';
 
-import RoleDashboard from './pages/Role/RoleDashboard';
-import RoleTasks from './pages/Role/RoleTasks';
-import CreateRoleTask from './pages/Role/CreateRoleTask';
-import TaskDetails from './pages/Role/TaskDetails';
+import PrivateRoute from './routes/PrivateRoute';
+
+import GroupDashboard from './pages/Admin/GroupDashboard';
+import InviteUser from './pages/Admin/InviteUser';
+import ManageUsers from './pages/Admin/ManageUsers';
+import CreateGroupRole from './pages/Admin/CreateGroupRole'
+import ManageGroupRoles from './pages/Admin/ManageGroupRoles';
+import ManageGroupTasks from './pages/Admin/ManageGroupTasks';
+import CreateGroupTask from './pages/Admin/CreateGroupTask';
+import GroupTaskDetails from './pages/Admin/GroupTaskDetails';
+
+import UserDashboard from './pages/User/UserDashboard';
+import CreateUserRole from './pages/User/CreateUserRole';
+import ManageUserRoles from './pages/User/ManageUserRoles';
+import CreateUserTask from './pages/User/CreateUserTask'; 
+import ManageUserTasks from './pages/User/ManageUserTasks';
+import UserTaskDetails from './pages/User/UserTaskDetails';
 
 const App = () => {
   return (
@@ -29,18 +36,24 @@ const App = () => {
 
           {/* Admin Routes */}
           <Route element={<PrivateRoute allowedRoles={["admin"]} />}>
-            <Route path='/admin/dashboard' element={<Dashboard />}/>
-            <Route path='/admin/tasks' element={<ManageTasks />}/>
-            <Route path='/admin/create-task' element={<CreateTask />}/>
-            <Route path='/admin/roles' element={<ManageRoles />}/>
+            <Route path='/admin/dashboard' element={<GroupDashboard />}/>
+            <Route path='/admin/invite-user' element={<InviteUser />}/>
+            <Route path='/admin/users' element={<ManageUsers />}/>
+            <Route path='/admin/create-role' element={<CreateGroupRole />}/>
+            <Route path='/admin/roles' element={<ManageGroupRoles />}/>
+            <Route path='/admin/create-task' element={<CreateGroupTask />}/>
+            <Route path='/admin/tasks' element={<ManageGroupTasks />}/>
+            <Route path='/admin/task-details/:id' element={<GroupTaskDetails />}/>
           </Route>
 
-          {/* Role Routes */}
-          <Route element={<PrivateRoute allowedRoles={["admin"]} />}>
-            <Route path='/role/dashboard' element={<RoleDashboard />}/>
-            <Route path='/role/tasks' element={<RoleTasks />}/>
-            <Route path='/role/create-task' element={<CreateRoleTask />}/>
-            <Route path='/role/task-details/:id' element={<TaskDetails />}/>
+          {/* User Routes */}
+          <Route>
+            <Route path='/user/dashboard' element={<UserDashboard />}/>
+            <Route path='/user/create-role' element={<CreateUserRole />}/>
+            <Route path='/user/roles' element={<ManageUserRoles />}/>
+            <Route path='/user/create-task' element={<CreateUserTask />}/>
+            <Route path='/user/tasks' element={<ManageUserTasks />}/>
+            <Route path='/user/task-details/:id' element={<UserTaskDetails />}/>
           </Route>
         </Routes>
       </Router>
