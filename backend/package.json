@@ -1,14 +1,21 @@
 {
   "name": "life-levels",
   "version": "0.1.1",
-  "description": "A framework that integrates with various apps to gamify different workflows ",
-  "main": "app.js",
+  "description": "A framework that integrates with various apps to gamify different workflows.",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.1",
+    "multer": "^2.0.1"
   }
 }
