@@ -1,0 +1,14 @@
+{
+  "name": "life-levels",
+  "version": "0.1.1",
+  "description": "A framework that integrates with various apps to gamify different workflows ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
