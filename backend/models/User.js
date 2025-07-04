@@ -1,3 +1,3 @@
 const mongoose = require("mongoose");
 
-const RoleSchema = new mongoose.Schema
+const UserSchema = new mongoose.Schema
