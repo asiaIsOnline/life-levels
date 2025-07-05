@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ManageUserRoles = () => {
+const ManageUserCharacters = () => {
   return (
     <div>ManageUserRoles</div>
   )
 }
 
-export default ManageUserRoles
+export default ManageUserCharacters

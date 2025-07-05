@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const TaskSchema = new mongoose.Schema(
+const ProjectSchema = new mongoose.Schema(
     {
     title: { type: String, required: true },
     description: { type: String },
@@ -11,8 +11,9 @@ const TaskSchema = new mongoose.Schema(
     createdBy: [{type: mongoose.Schema.Types.ObjectId, ref: "User"}],
     assignedUser: [{type: mongoose.Schema.Types.ObjectId, ref: "User"}],
     assignedCharacter: [{type: mongoose.Schema.Types.ObjectId, ref: "Character"}],
+    assignedTasks: [{type: mongoose.Schema.Types.ObjectId, ref: "Task"}],
     },
     { timestamps: true }
 );
 
-module.exports = mongoose.model("Task", TaskSchema);
+module.exports = mongoose.model("Project", ProjectSchema);
